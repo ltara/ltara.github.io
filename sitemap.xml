@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ltara.github.io/posts/59980.html</loc>
+    
+    <lastmod>2020-08-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ltara.github.io/tags/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
@@ -37,13 +44,6 @@
   </url>
   
   <url>
-    <loc>https://ltara.github.io/posts/6.html</loc>
-    
-    <lastmod>2020-08-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ltara.github.io/about/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
@@ -67,21 +67,7 @@
 
   
   <url>
-    <loc>https://ltara.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2020-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ltara.github.io/tags/Hexo/</loc>
-    <lastmod>2020-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ltara.github.io/tags/GitHub/</loc>
+    <loc>https://ltara.github.io/tags/MongoDB/</loc>
     <lastmod>2020-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -90,7 +76,7 @@
 
   
   <url>
-    <loc>https://ltara.github.io/categories/Hexo/</loc>
+    <loc>https://ltara.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
