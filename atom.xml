@@ -5,9 +5,9 @@
   <subtitle>[object Object]</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://ltara.github.io/"/>
+  <link href="http://ltara.gitee.io/"/>
   <updated>2020-08-12T11:01:18.034Z</updated>
-  <id>https://ltara.github.io/</id>
+  <id>http://ltara.gitee.io/</id>
   
   <author>
     <name>lt</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>MongoDB的基本操作（一）</title>
-    <link href="https://ltara.github.io/posts/59980.html"/>
-    <id>https://ltara.github.io/posts/59980.html</id>
+    <link href="http://ltara.gitee.io/posts/59980.html"/>
+    <id>http://ltara.gitee.io/posts/59980.html</id>
     <published>2020-08-12T10:33:16.000Z</published>
     <updated>2020-08-12T11:01:18.034Z</updated>
     
@@ -35,10 +35,10 @@
     </summary>
     
     
-      <category term="数据库" scheme="https://ltara.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://ltara.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="MongoDB" scheme="https://ltara.github.io/tags/MongoDB/"/>
+      <category term="MongoDB" scheme="http://ltara.gitee.io/tags/MongoDB/"/>
     
   </entry>
   

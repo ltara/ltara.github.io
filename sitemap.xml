@@ -2,56 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ltara.github.io/posts/59980.html</loc>
+    <loc>http://ltara.gitee.io/posts/59980.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ltara.github.io/tags/index.html</loc>
+    <loc>http://ltara.gitee.io/tags/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ltara.github.io/contact/index.html</loc>
+    <loc>http://ltara.gitee.io/friends/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ltara.github.io/friends/index.html</loc>
+    <loc>http://ltara.gitee.io/contact/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ltara.github.io/archives/index.html</loc>
+    <loc>http://ltara.gitee.io/archives/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ltara.github.io/categories/index.html</loc>
+    <loc>http://ltara.gitee.io/categories/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ltara.github.io/about/index.html</loc>
+    <loc>http://ltara.gitee.io/about/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ltara.github.io/404.html</loc>
+    <loc>http://ltara.gitee.io/404.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
@@ -59,7 +59,7 @@
   
 
   <url>
-    <loc>https://ltara.github.io/</loc>
+    <loc>http://ltara.gitee.io/</loc>
     <lastmod>2020-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -67,7 +67,7 @@
 
   
   <url>
-    <loc>https://ltara.github.io/tags/MongoDB/</loc>
+    <loc>http://ltara.gitee.io/tags/MongoDB/</loc>
     <lastmod>2020-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -76,7 +76,7 @@
 
   
   <url>
-    <loc>https://ltara.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>http://ltara.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2020-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
