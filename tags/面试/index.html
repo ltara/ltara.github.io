@@ -4,8 +4,8 @@
 
 <head><link rel=manifest href=/manifest.json>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客">
-    <meta name="description" content="LTARA">
+    <meta name="keywords" content="标签: 面试, 博客">
+    <meta name="description" content="标签: 面试 | LTARA">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
-    <title>LTARA</title>
+    <title>标签: 面试 | LTARA</title>
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -337,56 +337,9 @@
     </nav>
 
 </header>
-
-    <style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+        <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -420,140 +373,63 @@
         $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
     </script>
 
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://gitee.com/ltara/" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fa fa-github-alt"></i>Gitee
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-    });
-</script>
-
-
 
 <main class="content">
 
     
-        <div id="indexCard" class="index-card">
-            <div class="container ">
-                <div class="card">
-                    <div class="card-content">
-                        
-                            <div class="dream">
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            放弃不难，但坚持一定很酷。
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                    
+                    <a href="/tags/MongoDB/" title="MongoDB: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                          data-tagname="MongoDB" style="background-color: #F9EBEA;">MongoDB
+                        <span class="tag-length">1</span>
+                    </span>
+                    </a>
+                
+                    
+                    <a href="/tags/JavaScript/" title="JavaScript: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                          data-tagname="JavaScript" style="background-color: #F5EEF8;">JavaScript
+                        <span class="tag-length">1</span>
+                    </span>
+                    </a>
+                
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/" title="面试: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                          data-tagname="面试" style="background-color: #D5F5E3;">面试
+                        <span class="tag-length">1</span>
+                    </span>
+                    </a>
+                
+            </div>
         </div>
     </div>
 </div>
 
-                        
-
-                        
-                        
-                        <div id="recommend-sections" class="recommend">
-                            
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     
 
-    
-
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                
+                <div class="article tag-post col s12 m6 l4" data-tags="JavaScript, 面试" data-aos="fade-up">
                     <div class="card">
                         <a href="/posts/56269.html">
-                            <div class="card-image">
+                            <div class="card-image tag-image">
                                 
                                     
                                     <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="JavaScript基础之执行上下文">
@@ -561,14 +437,7 @@
                                 <span class="card-title">JavaScript基础之执行上下文</span>
                             </div>
                         </a>
-
                         <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    执行上下文概念执行上下文当 JS 引擎解析到可执行代码片段（通常是函数调用阶段）的时候，就会先做一些执行前的准备工作，这个 “准备工作”，就叫做 “执行上下文(execution context 简称 EC)” 或者也可以叫做执行环境。
-E
-                                
-                            </div>
                             <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-13
@@ -578,95 +447,19 @@ E
                                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                                         
                                             <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
+                                JavaScript
                                 </a>
                                         
                                     
                                 </span>
                             </div>
                         </div>
-
-                        
-                            <div class="card-action article-tags">
-                                
-                                    <a href="/tags/JavaScript/">
-                                        <span class="chip bg-color">JavaScript</span>
-                                    </a>
-                                
-                                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                                        <span class="chip bg-color">面试</span>
-                                    </a>
-                                
-                            </div>
-                        
-                    </div>
-                </div>
-            
-                <div class="article col s12 m6 l4" data-aos="zoom-in">
-                    <div class="card">
-                        <a href="/posts/59980.html">
-                            <div class="card-image">
-                                
-                                    
-                                    <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="MongoDB的基本操作（一）">
-                                
-                                <span class="card-title">MongoDB的基本操作（一）</span>
-                            </div>
-                        </a>
-
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    MongoDB 学习之基本操作（Node）下载与安装
-下载地址
-安装：全部默认下一步就行了
-安装成功
-
-# 在命令行输入以下命令
-mongod --version
-成功：
-配置环境变量path的配置：
-
-复制bin目录
-
-
-MongoDB默
-                                
-                            </div>
-                            <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-12
-                            </span>
-                                <span class="publish-author">
-                                    
-                                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                        
-                                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
-                                </a>
-                                        
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                            <div class="card-action article-tags">
-                                
-                                    <a href="/tags/MongoDB/">
-                                        <span class="chip bg-color">MongoDB</span>
-                                    </a>
-                                
-                            </div>
-                        
                     </div>
                 </div>
             
         </div>
     </article>
-
 </main>
-
 
 
 <footer class="page-footer bg-color">
