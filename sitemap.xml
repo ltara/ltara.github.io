@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ltara.gitee.io/posts/48258.html</loc>
+    
+    <lastmod>2020-08-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ltara.gitee.io/posts/31239.html</loc>
     
     <lastmod>2020-08-16</lastmod>
@@ -81,7 +88,7 @@
 
   <url>
     <loc>http://ltara.gitee.io/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -89,21 +96,21 @@
   
   <url>
     <loc>http://ltara.gitee.io/tags/MongoDB/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/JavaScript/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -112,14 +119,14 @@
   
   <url>
     <loc>http://ltara.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/categories/JavaScript/</loc>
-    <lastmod>2020-08-16</lastmod>
+    <lastmod>2020-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
