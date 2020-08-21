@@ -1180,7 +1180,7 @@ obj<span class="token punctuation">.</span><span class="token function">sayName<
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             // headingsOffset: -205,
-            headingSelector: 'h2, h3, h4, h5'
+            headingSelector: 'h1, h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -1192,7 +1192,7 @@ obj<span class="token punctuation">.</span><span class="token function">sayName<
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4, h5').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1444,7 +1444,7 @@ obj<span class="token punctuation">.</span><span class="token function">sayName<
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1597997383038')
+  navigator.serviceWorker.register('/sw.js?t=1597999064621')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
