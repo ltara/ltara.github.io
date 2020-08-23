@@ -58,13 +58,6 @@
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/contact/index.html</loc>
-    
-    <lastmod>2020-08-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ltara.gitee.io/friends/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
@@ -72,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/archives/index.html</loc>
+    <loc>http://ltara.gitee.io/contact/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
@@ -80,6 +73,13 @@
   
   <url>
     <loc>http://ltara.gitee.io/categories/index.html</loc>
+    
+    <lastmod>2020-08-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ltara.gitee.io/archives/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
