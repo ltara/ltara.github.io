@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/categories/index.html</loc>
+    <loc>http://ltara.gitee.io/archives/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/archives/index.html</loc>
+    <loc>http://ltara.gitee.io/categories/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
@@ -109,14 +109,14 @@
 
   
   <url>
-    <loc>http://ltara.gitee.io/tags/JavaScript/</loc>
+    <loc>http://ltara.gitee.io/tags/CSS/</loc>
     <lastmod>2020-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/tags/CSS/</loc>
+    <loc>http://ltara.gitee.io/tags/JavaScript/</loc>
     <lastmod>2020-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -132,14 +132,14 @@
 
   
   <url>
-    <loc>http://ltara.gitee.io/categories/JavaScript/</loc>
+    <loc>http://ltara.gitee.io/categories/CSS/</loc>
     <lastmod>2020-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/categories/CSS/</loc>
+    <loc>http://ltara.gitee.io/categories/JavaScript/</loc>
     <lastmod>2020-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

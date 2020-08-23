@@ -24,11 +24,11 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
+  precacheUrls.push('/posts/61759.html');
+
   precacheUrls.push('/posts/48258.html');
 
   precacheUrls.push('/posts/38149.html');
-
-  precacheUrls.push('/posts/61759.html');
 
   precacheUrls.push('/posts/19673.html');
 
