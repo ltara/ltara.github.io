@@ -515,21 +515,21 @@
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-check-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2020-09-09
+                        2020-09-10
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.9k
+                        3.8k
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        11 分
+                        17 分
                     </div>
                 
 
@@ -549,34 +549,33 @@
 </blockquote>
 <h3 id="父组件向子组件传递数据"><a href="#父组件向子组件传递数据" class="headerlink" title="父组件向子组件传递数据"></a>父组件向子组件传递数据</h3><h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><p><strong>父组件</strong></p>
 <p>在父组件里引入子组件，然后通过子组件标签属性来传递数据</p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>Parent</h1>
-        <my-child my-message="from Parent Component"></my-child>
-    </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Parent&lt;/h1&gt;
+        &lt;my-child my-message="from Parent Component"&gt;&lt;/my-child&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import MyChild from './Child'
 export default {
     components: {
         MyChild,
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>子组件</strong></p>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>子组件</strong></p>
 <p>在子组件显式地用 <code>props</code> 选项声明它预期的数据并使用</p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-    <h1>Child</h1>
-    <h3>{{ myMessage }}</h3>
-  </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+    &lt;h1&gt;Child&lt;/h1&gt;
+    &lt;h3&gt;{{ myMessage }}&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
     props: {
        myMessage: {
@@ -585,11 +584,10 @@ export default {
       }
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><h5 id="camelCase-vs-kebab-case"><a href="#camelCase-vs-kebab-case" class="headerlink" title="camelCase vs. kebab-case"></a>camelCase vs. kebab-case</h5><p>HTML 特性是不区分大小写的。所以，当使用的不是字符串模板时，camelCase (驼峰式命名) 的 prop 需要转换为相对应的 kebab-case (短横线分隔式命名)。</p>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><h5 id="camelCase-vs-kebab-case"><a href="#camelCase-vs-kebab-case" class="headerlink" title="camelCase vs. kebab-case"></a>camelCase vs. kebab-case</h5><p>HTML 特性是不区分大小写的。所以，当使用的不是字符串模板时，camelCase (驼峰式命名) 的 prop 需要转换为相对应的 kebab-case (短横线分隔式命名)。</p>
 <h5 id="动态props"><a href="#动态props" class="headerlink" title="动态props"></a>动态props</h5><p>与绑定到任何普通的 HTML 特性相类似，我们可以用 <code>v-bind</code> 来动态地将 <code>prop</code> 绑定到父组件的数据。每当父组件的数据变化时，该变化也会传导给子组件：</p>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>my-child</span> <span class="token attr-name">:my-message</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span>from Parent Component<span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>my-child</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>以上是使用<code>v-bind</code>的简写方式。</p>
@@ -651,15 +649,15 @@ export default {
 <li><p><strong>在使用子组件的模板的标签上订阅子组件内部发布的事件</strong></p>
 </li>
 </ol>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>Parent</h1>
-        <my-child @transMessage="showMessage"></my-child>
-        <p>{{ message }}</p>
-    </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Parent&lt;/h1&gt;
+        &lt;my-child @transMessage="showMessage"&gt;&lt;/my-child&gt;
+        &lt;p&gt;{{ message }}&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import myChild from './Child'
 export default {
     data() {
@@ -676,39 +674,37 @@ export default {
         myChild
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>子组件</strong></p>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>子组件</strong></p>
 <ol>
 <li><strong>在子组件中调用 <code>$emit()</code> 方法发布一个事件</strong></li>
 </ol>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-    <h2>Child</h2>
-  </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+    &lt;h2&gt;Child&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
     mounted() {
     this.$emit('transMessage', 'I am from Child component')
   }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="parent-children"><a href="#parent-children" class="headerlink" title="$parent/$children"></a>$parent/$children</h2><h3 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h3><p><strong>子组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-    <h2>Child</h2>
-    <p>{{ message }}</p>
-  </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><h2 id="parent-children"><a href="#parent-children" class="headerlink" title="$parent/$children"></a>$parent/$children</h2><h3 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h3><p><strong>子组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+    &lt;h2&gt;Child&lt;/h2&gt;
+    &lt;p&gt;{{ message }}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
   data() {
     return {
@@ -720,20 +716,19 @@ export default {
     this.message = this.$parent.parentMessage
   }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>父组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>Parent</h1>
-        <my-child></my-child>
-        <p>{{ message }}</p>
-    </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>父组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Parent&lt;/h1&gt;
+        &lt;my-child&gt;&lt;/my-child&gt;
+        &lt;p&gt;{{ message }}&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import myChild from './Child'
 export default {
     data() {
@@ -751,11 +746,10 @@ export default {
         myChild
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><blockquote>
 <p>节制地使用 <code>$parent</code> 和 <code>$children</code> - 它们的主要目的是作为访问组件的应急方法。更推荐用 props 和 events 实现父子组件通信</p>
 </blockquote>
 <h2 id="provide-inject（祖先组件向后代组件传递）"><a href="#provide-inject（祖先组件向后代组件传递）" class="headerlink" title="provide/inject（祖先组件向后代组件传递）"></a>provide/inject（祖先组件向后代组件传递）</h2><blockquote>
@@ -764,14 +758,14 @@ export default {
 </blockquote>
 <p>这对选项需要一起使用，以允许一个<strong>祖先组件</strong>向其<strong>所有子孙后代</strong>注入一个依赖，不论组件层次有多深，并在其上下游关系成立的时间里始终生效。</p>
 <p><strong>父组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>Parent</h1>
-        <my-child></my-child>
-    </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Parent&lt;/h1&gt;
+        &lt;my-child&gt;&lt;/my-child&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import myChild from './Child'
 export default {
     // 父组件提供一个 foo 对象 
@@ -785,22 +779,21 @@ export default {
         myChild
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>子组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-    <h2>Child</h2>
-    <ul v-for="item in foo">
-      <li>{{ item }}</li>
-    </ul>
-    <hr>
-  </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>子组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+    &lt;h2&gt;Child&lt;/h2&gt;
+    &lt;ul v-for="item in foo"&gt;
+      &lt;li&gt;{{ item }}&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;hr&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
   // 子组件注入 foo
   inject: ['foo'],
@@ -813,11 +806,10 @@ export default {
     this.message = this.foo
   }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><blockquote>
 <p>注意: 这里不论子组件嵌套有多深, 只要调用了<code>inject</code> 那么就可以注入<code>provide</code>中的数据，而不局限于只能从当前父组件的props属性中回去数据</p>
 </blockquote>
 <h2 id="ref-ref（子组件向父组件传递）"><a href="#ref-ref（子组件向父组件传递）" class="headerlink" title="ref/$ref（子组件向父组件传递）"></a>ref/$ref（子组件向父组件传递）</h2><blockquote>
@@ -828,14 +820,14 @@ export default {
 <li><strong>在使用子组件的模板的标签上通过<code>ref</code>为子组件赋予一个 ID 引用</strong></li>
 <li><strong>通过 <code>$ref</code> 获取子组件实例</strong></li>
 </ol>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>Parent</h1>
-        <my-child ref="child"></my-child>
-    </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Parent&lt;/h1&gt;
+        &lt;my-child ref="child"&gt;&lt;/my-child&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import myChild from './Child'
 export default {
     components: {
@@ -845,19 +837,18 @@ export default {
         console.log(this.$refs.child)
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>子组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-    <h2>Child</h2>
-    <hr>
-  </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>子组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+    &lt;h2&gt;Child&lt;/h2&gt;
+    &lt;hr&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
   data() {
     return {
@@ -865,11 +856,10 @@ export default {
     }
   },
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="attrs-listeners"><a href="#attrs-listeners" class="headerlink" title="$attrs/$listeners"></a>$attrs/$listeners</h2><p>在非直接父子组件之间的通信，如A组件下面有B组件，B组件下面有C组件，我们想将A组件的数据传递给C组件或者将C组件的数据传递给A组件，可以有以下几种方法：</p>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><h2 id="attrs-listeners"><a href="#attrs-listeners" class="headerlink" title="$attrs/$listeners"></a>$attrs/$listeners</h2><p>在非直接父子组件之间的通信，如A组件下面有B组件，B组件下面有C组件，我们想将A组件的数据传递给C组件或者将C组件的数据传递给A组件，可以有以下几种方法：</p>
 <ul>
 <li><strong>props</strong>：使用<code>props</code>绑定来进行一级一级的信息传递，如果D组件中状态改变需要传递数据给A，使用事件系统一级级往上传递（<strong>繁琐</strong>）</li>
 <li><strong>$parent/$children</strong>：多个<code>$parent</code>或者<code>$children</code>一层一层向上或向下传递（<strong>节制地使用这两个实例属性</strong>）</li>
@@ -887,14 +877,14 @@ export default {
 <p><strong><code>$attrs</code></strong>：包含了父作用域中不作为 prop 被识别 (且获取) 的 attribute 绑定 (<code>class</code> 和 <code>style</code> 除外)。当一个组件没有声明任何 prop 时，这里会包含所有父作用域的绑定 (<code>class</code> 和 <code>style</code> 除外)，并且可以通过 <code>v-bind="$attrs"</code> 传入内部组件</p>
 </blockquote>
 <p><strong>A组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>A</h1>
-        <com-b :a="1" :b="2" :c="3"></com-b>
-    </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;A&lt;/h1&gt;
+        &lt;com-b :a="1" :b="2" :c="3"&gt;&lt;/com-b&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import comB from './ComB'
 export default {
     data() {
@@ -906,19 +896,18 @@ export default {
         comB
     },
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>B组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>B</h1>
-        <com-c v-bind="$attrs"></com-c>
-    </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>B组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;B&lt;/h1&gt;
+        &lt;com-c v-bind="$attrs"&gt;&lt;/com-c&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import comC from './ComC'
 export default {
     data() {
@@ -930,18 +919,17 @@ export default {
         comC
     },
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>C组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>C</h1>
-    </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>C组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;C&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
     inheritAttrs: false,
     data() {
@@ -958,21 +946,20 @@ export default {
         console.log(this.$attrs) // {b: 2, c: 3}
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="后代组件向祖先组件传递"><a href="#后代组件向祖先组件传递" class="headerlink" title="后代组件向祖先组件传递"></a>后代组件向祖先组件传递</h3><blockquote>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><h3 id="后代组件向祖先组件传递"><a href="#后代组件向祖先组件传递" class="headerlink" title="后代组件向祖先组件传递"></a>后代组件向祖先组件传递</h3><blockquote>
 <p><strong><code>$listenders</code></strong>：包含了父作用域中的 (不含 <code>.native</code> 修饰器的) <code>v-on</code> 事件监听器。它可以通过 <code>v-on="$listeners"</code> 传入内部组件</p>
 </blockquote>
 <p><strong>A组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-  <div>
-    <my-parent @test1="showTest1" @test2="showTest2"></my-parent>
-  </div>
-</template>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;my-parent @test1="showTest1" @test2="showTest2"&gt;&lt;/my-parent&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import MyParent from './views/Parent'
 export default {
     data() {
@@ -992,19 +979,18 @@ export default {
         }
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>B组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>Parent</h1>
-        <my-child v-on="$listeners"></my-child>
-    </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>B组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Parent&lt;/h1&gt;
+        &lt;my-child v-on="$listeners"&gt;&lt;/my-child&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import myChild from './Child'
 export default {
     data() {
@@ -1016,18 +1002,17 @@ export default {
         myChild
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>C组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-  <div>
-    <h2>Child</h2>
-  </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>C组件</strong></p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Child&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
   created() {
     console.log(this.$listeners)
@@ -1035,11 +1020,10 @@ export default {
     this.$emit("test2", 'from child component')
   }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="eventBus"><a href="#eventBus" class="headerlink" title="eventBus"></a>eventBus</h2><p><code>eventBus</code> 又称为事件总线，在vue中可以使用它来作为沟通桥梁的概念, 就像是所有组件共用相同的事件中心，可以向该中心注册发送事件或接收事件， 所以组件都可以通知其他组件。</p>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><h2 id="eventBus"><a href="#eventBus" class="headerlink" title="eventBus"></a>eventBus</h2><p><code>eventBus</code> 又称为事件总线，在vue中可以使用它来作为沟通桥梁的概念, 就像是所有组件共用相同的事件中心，可以向该中心注册发送事件或接收事件， 所以组件都可以通知其他组件。</p>
 <blockquote>
 <p><code>$emit</code>和<code>$on</code>的事件必须使用一个空的 Vue 实例作为中央事件总线的实例上，才能够触发，否则会出现子组件<code>$emit</code>后父组件没有监听到函数的变化</p>
 </blockquote>
@@ -1048,14 +1032,14 @@ export default {
 <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="发送事件"><a href="#发送事件" class="headerlink" title="发送事件"></a>发送事件</h3><p>假设我们有两个兄弟组件：<code>Elder-brother</code>、<code>Younger-brother</code>，我们需要在这两个兄弟组件之间传递数据</p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <elder-brother></elder-brother>
-        <younger-brother></younger-brother>
-  </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;elder-brother&gt;&lt;/elder-brother&gt;
+        &lt;younger-brother&gt;&lt;/younger-brother&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import ElderBrother from './views/Elder-brother'
 import YoungerBrother from './views/Younger-brother'
 export default {
@@ -1064,19 +1048,18 @@ export default {
         YoungerBrother
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>Elder-brother</code>组件：</p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>elder brother</h1>
-        <button @click="sendMessage">send</button>
-    </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><code>Elder-brother</code>组件：</p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;elder brother&lt;/h1&gt;
+        &lt;button @click="sendMessage"&gt;send&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import EventBus from '../util/bus'
 export default {
     data() {
@@ -1091,42 +1074,40 @@ export default {
         },
     },
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="接收事件"><a href="#接收事件" class="headerlink" title="接收事件"></a>接收事件</h3><p><code>Younger-brother</code>组件：</p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-  <h1>younger brother</h1>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><h3 id="接收事件"><a href="#接收事件" class="headerlink" title="接收事件"></a>接收事件</h3><p><code>Younger-brother</code>组件：</p>
+<pre><code>&lt;template&gt;
+  &lt;h1&gt;younger brother&lt;/h1&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import EventBus from '../util/bus'
 export default {
   mounted() {
     // 利用 $on 接收事件，并执行回调函数
-    EventBus.$on('transMessage', (param) => {
+    EventBus.$on('transMessage', (param) =&gt; {
       console.log(param)
     })
   }
 }
-</script>
+&lt;/script&gt;
 
-<style>
+&lt;style&gt;
 
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这样就完成了兄弟组件之间的数据传递。</p>
+&lt;/style&gt;</code></pre><p>这样就完成了兄弟组件之间的数据传递。</p>
 <h3 id="移除事件监听者"><a href="#移除事件监听者" class="headerlink" title="移除事件监听者"></a>移除事件监听者</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> eventBus <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'bus.js'</span>
 EventBus<span class="token punctuation">.</span><span class="token function">$off</span><span class="token punctuation">(</span><span class="token string">'transMessage'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>如果想精确移除某个事件的监听器，还需要传递一个回调函数：</p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-  <div>
-    <h1>younger brother</h1>
-  <button @click="destroy">destroy</button>
-  </div>
-</template>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;younger brother&lt;/h1&gt;
+  &lt;button @click="destroy"&gt;destroy&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import EventBus from '../util/bus'
 export default {
   mounted() {
@@ -1145,12 +1126,11 @@ export default {
     }
   }
 }
-</script>
+&lt;/script&gt;
 
-<style>
+&lt;style&gt;
 
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="localStorage-sessionStorage"><a href="#localStorage-sessionStorage" class="headerlink" title="localStorage / sessionStorage"></a>localStorage / sessionStorage</h2><p>这种通信比较简单,缺点是数据和状态比较混乱,不太容易维护。 通过<code>window.localStorage.getItem(key)</code>获取数据 通过<code>window.localStorage.setItem(key,value)</code>存储数据</p>
+&lt;/style&gt;</code></pre><h2 id="localStorage-sessionStorage"><a href="#localStorage-sessionStorage" class="headerlink" title="localStorage / sessionStorage"></a>localStorage / sessionStorage</h2><p>这种通信比较简单,缺点是数据和状态比较混乱,不太容易维护。 通过<code>window.localStorage.getItem(key)</code>获取数据 通过<code>window.localStorage.setItem(key,value)</code>存储数据</p>
 <blockquote>
 <p>注意用<code>JSON.parse()</code> / <code>JSON.stringify()</code> 做数据格式转换 <code>localStorage</code> / <code>sessionStorage</code>可以结合<code>vuex</code>，实现数据的持久保存,同时使用vuex解决数据和状态混乱问题。</p>
 </blockquote>
@@ -1158,15 +1138,15 @@ export default {
 <p>v-model只能实现父子组件之间的数据传递</p>
 </blockquote>
 <p><strong>父组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-        <h1>Parent</h1>
-        <p>{{ message }}</p>
-        <my-child v-model="message"></my-child>
-    </div>
-</template>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Parent&lt;/h1&gt;
+        &lt;p&gt;{{ message }}&lt;/p&gt;
+        &lt;my-child v-model="message"&gt;&lt;/my-child&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 import myChild from './Child'
 export default {
     data() {
@@ -1178,19 +1158,18 @@ export default {
         myChild
     }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>子组件</strong></p>
-<pre class="line-numbers language-vue"><code class="language-vue"><template>
-    <div>
-    <h2>Child</h2>
-    <input type="text" v-model="myMessage" @input="changeValue">
-  </div>
-</template>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><p><strong>子组件</strong></p>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+    &lt;h2&gt;Child&lt;/h2&gt;
+    &lt;input type="text" v-model="myMessage" @input="changeValue"&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
+&lt;script&gt;
 export default {
   props: {
     value: String
@@ -1206,11 +1185,10 @@ export default {
     }
   }
 }
-</script>
+&lt;/script&gt;
 
-<style>
-</style><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol>
+&lt;style&gt;
+&lt;/style&gt;</code></pre><ol>
 <li>在 Parent 组件中，我们给自定义的 Child 组件实现了 v-model 绑定了 <code>message</code> 属性。此时相当于给 Child 组件传递了 value 属性和绑定了 input 事件</li>
 <li>顺理成章，在定义的 child 组件中，可以通过 props 获取 value 属性，根据 props 单向数据流的原则，又将 value 缓存在了 data 里面的 <code>myMessage</code> 上，再在 input 上通过 <code>v-model</code> 绑定了 <code>myMessage</code> 属性和一个 <code>change</code> 事件。当 input 值变化时，就会触发 change 事件，处理 parent 组件通过 <code>v-model</code> 给 child 组件绑定的 <code>input</code> 事件，触发 <code>parent</code> 组件中 <code>message</code> 属性值的变化，完成 <code>child</code> 子组件改变 parent 组件的属性值。</li>
 </ol>
@@ -1606,7 +1584,7 @@ flex基本概念采用 Fl
             
                 
                     &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                            class="white-color">26.6k</span>&nbsp;字
+                            class="white-color">27.5k</span>&nbsp;字
                 
                 
                 <script>
@@ -1767,7 +1745,7 @@ flex基本概念采用 Fl
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1599669154416')
+  navigator.serviceWorker.register('/sw.js?t=1599672234346')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
