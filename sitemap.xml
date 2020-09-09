@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/friends/index.html</loc>
+    <loc>http://ltara.gitee.io/contact/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/contact/index.html</loc>
+    <loc>http://ltara.gitee.io/friends/index.html</loc>
     
     <lastmod>2020-08-12</lastmod>
     
@@ -123,13 +123,6 @@
 
   
   <url>
-    <loc>http://ltara.gitee.io/tags/CSS/</loc>
-    <lastmod>2020-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ltara.gitee.io/tags/JavaScript/</loc>
     <lastmod>2020-09-09</lastmod>
     <changefreq>daily</changefreq>
@@ -137,7 +130,7 @@
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/tags/MongoDB/</loc>
+    <loc>http://ltara.gitee.io/tags/CSS/</loc>
     <lastmod>2020-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -152,6 +145,13 @@
   
   <url>
     <loc>http://ltara.gitee.io/tags/grid/</loc>
+    <lastmod>2020-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ltara.gitee.io/tags/MongoDB/</loc>
     <lastmod>2020-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -174,14 +174,14 @@
 
   
   <url>
-    <loc>http://ltara.gitee.io/categories/CSS/</loc>
+    <loc>http://ltara.gitee.io/categories/JavaScript/</loc>
     <lastmod>2020-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ltara.gitee.io/categories/JavaScript/</loc>
+    <loc>http://ltara.gitee.io/categories/CSS/</loc>
     <lastmod>2020-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
