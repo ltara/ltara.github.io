@@ -584,10 +584,10 @@
 </ul>
 </li>
 </ul>
-<h4 id="setTimeout-fn-0"><a href="#setTimeout-fn-0" class="headerlink" title="setTimeout(fn,0)"></a><code>setTimeout(fn,0)</code></h4><p>指定某个任务在主线程最早可得的空闲时间执行，意思就是不用再等多少秒了，只要主线程执行栈内的同步任务全部执行完成，栈为空就马上执行。 （关于<code>setTimeout</code>要补充的是，即便主线程为空，0毫秒实际上也是达不到的。根据HTML的标准，最低是4毫秒。）</p>
-<h4 id="setInterval-fn-0"><a href="#setInterval-fn-0" class="headerlink" title="setInterval(fn,0)"></a><code>setInterval(fn,0)</code></h4><p>会每隔指定的时间将注册的函数置入Event Queue，如果前面的任务耗时太久，那么同样需要等待。每过ms秒，会有fn进入Event Queue。一旦<code>setInterval</code>的 回调函数fn执行时间超过了延迟时间ms，那么就完全看不出来有时间间隔了 。</p>
-<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a><code>requestAnimationFrame</code></h4><p>请求动画帧，是一个宏任务，html5 提供的一个专门用于请求动画的API，相比起<code>setTimeout</code>由系统决定回调函数的执行时机。60Hz的刷新频率，那么每次刷新的间隔中会执行一次回调函数，不会引起丢帧，不会卡顿。</p>
-<h4 id="Promise与process-nextTick-callback"><a href="#Promise与process-nextTick-callback" class="headerlink" title="Promise与process.nextTick(callback)"></a>Promise与<code>process.nextTick(callback)</code></h4><p><code>process.nextTick(callback)</code>：类似node.js版的”<code>setTimeout</code>”，在事件循环的下一次循环中调用 callback 回调函数。</p>
+<h4 id="setTimeout-fn-0"><a href="#setTimeout-fn-0" class="headerlink" title="setTimeout(fn,0)"></a>setTimeout(fn,0)</h4><p>指定某个任务在主线程最早可得的空闲时间执行，意思就是不用再等多少秒了，只要主线程执行栈内的同步任务全部执行完成，栈为空就马上执行。 （关于<code>setTimeout</code>要补充的是，即便主线程为空，0毫秒实际上也是达不到的。根据HTML的标准，最低是4毫秒。）</p>
+<h4 id="setInterval-fn-0"><a href="#setInterval-fn-0" class="headerlink" title="setInterval(fn,0)"></a>setInterval(fn,0)</h4><p>会每隔指定的时间将注册的函数置入Event Queue，如果前面的任务耗时太久，那么同样需要等待。每过ms秒，会有fn进入Event Queue。一旦<code>setInterval</code>的 回调函数fn执行时间超过了延迟时间ms，那么就完全看不出来有时间间隔了 。</p>
+<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a>requestAnimationFrame</h4><p>请求动画帧，是一个宏任务，html5 提供的一个专门用于请求动画的API，相比起<code>setTimeout</code>由系统决定回调函数的执行时机。60Hz的刷新频率，那么每次刷新的间隔中会执行一次回调函数，不会引起丢帧，不会卡顿。</p>
+<h4 id="Promise与process-nextTick-callback"><a href="#Promise与process-nextTick-callback" class="headerlink" title="Promise与process.nextTick(callback)"></a>Promise与process.nextTick(callback)</h4><p><code>process.nextTick(callback)</code>：类似node.js版的”<code>setTimeout</code>”，在事件循环的下一次循环中调用 callback 回调函数。</p>
 <p>不同类型的任务会进入对应的Event Queue，比如<code>setTimeout</code>和<code>setInterval</code>会进入相同的Event Queue。</p>
 <h3 id="Event-Loop是谁规定的？"><a href="#Event-Loop是谁规定的？" class="headerlink" title="Event Loop是谁规定的？"></a>Event Loop是谁规定的？</h3><ul>
 <li><strong>Engine（执行引擎）：</strong> 如V8 Engine，V8 实现并提供了 ECMAScript 标准中的所有数据类型、操作符、对象和方法（注意并没有 DOM）。 <strong>Event Loop</strong> 是属于 <strong>JavaScript Runtime</strong> 的，是由宿主环境提供的（比如浏览器，node）。</li>
@@ -610,7 +610,7 @@
 </blockquote>
 <p>怎么知道主线程执行栈为空？</p>
 <p>js引擎存在monitoring process进程，会持续不断的检查主线程执行栈是否为空，一旦为空，就会去Event Queue那里检查是否有等待被调用的函数。</p>
-<h2 id="浏览器事件循环"><a href="#浏览器事件循环" class="headerlink" title="浏览器事件循环"></a>浏览器事件循环</h2><p>看一张图，理解了这张图就理解了浏览器的事件循环。<a href="https://segmentfault.com/img/remote/1460000016278118/view">如果看不到图，看这里</a></p>
+<h2 id="浏览器事件循环"><a href="#浏览器事件循环" class="headerlink" title="浏览器事件循环"></a>浏览器事件循环</h2><p>看一张图，理解了这张图就理解了浏览器的事件循环。<a href="https://segmentfault.com/img/remote/1460000016278118">如果看不到图，看这里</a></p>
 <p><img src="https://segmentfault.com/img/remote/1460000016278118/view" alt=""></p>
 <h3 id="执行规则"><a href="#执行规则" class="headerlink" title="执行规则"></a>执行规则</h3><ul>
 <li><strong>首先在执行栈（call stack）中的内容执行完毕清空后，会在事件队列（Event queue）检查一下哪些是宏任务哪些是微任务，然后执行所有的微任务，然后执行一个宏任务，之后再次执行所有的微任务。也就是说在主线程（main thread）任务执行完毕后会把任务队列中的微任务全部执行，然后再执行一个宏任务，这个宏任务执行完再次检查队列内部的微任务，有就全部执行没有就再执行一个宏任务</strong>。</li>
@@ -655,7 +655,7 @@
 <li>如果希望在每轮Event Loop都即时呈现变动，可以使用<code>requestAnimationFrame</code>。</li>
 </ul>
 <h2 id="Node事件循环"><a href="#Node事件循环" class="headerlink" title="Node事件循环"></a>Node事件循环</h2><p>Node的事件循环是基于libuv实现，而libuv是 Node 的新跨平台抽象层，libuv使用异步IO事件驱动的编程方式，核心是提供I/O的事件循环和异步回调。libuv的API包含有时间，非阻塞的网络，异步文件操作，子进程等等。</p>
-<p>看一张图，<a href="https://segmentfault.com/img/remote/1460000016278119/view">如果看不到图，看这里</a></p>
+<p>看一张图，<a href="https://segmentfault.com/img/remote/1460000016278119">如果看不到图，看这里</a></p>
 <p><img src="https://segmentfault.com/img/remote/1460000016278119/view" alt=""></p>
 <blockquote>
 <p>（1）V8引擎解析JavaScript脚本。</p>
@@ -1292,7 +1292,7 @@ immd 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1601737591232')
+  navigator.serviceWorker.register('/sw.js?t=1601738085373')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
