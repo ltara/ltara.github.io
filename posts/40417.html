@@ -4,12 +4,11 @@
 
 <head><link rel=manifest href=/manifest.json>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机h网络之HTTPS, 博客">
-    <meta name="description" content="概念参考SSL/TLS协议详解(上)：密码套件，哈希，加密，密钥交换算法
-SSL/TLS协议详解(中)——证书颁发机构
-SSL/TLS协议详解(下)——TLS握手协议
-HTTPS 详解一：附带最精美详尽的 HTTPS 原理图
-HTTPS 详">
+    <meta name="keywords" content="计算机网络之HTTPS, 博客">
+    <meta name="description" content="概念
+HTTPS = HTTP + SSL/TLS
+
+HTTPS （Secure Hypertext Transfer Protocol）安全超文本传输协议，是经过SSL/TLS加密的HTTP协议，端口号为443。其设计的主要目的是，提供对">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@ HTTPS 详">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
-    <title>计算机h网络之HTTPS | LTARA</title>
+    <title>计算机网络之HTTPS | LTARA</title>
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -358,12 +357,12 @@ HTTPS 详">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机h网络之HTTPS</h1>
+                    <h1 class="description center-align post-title">计算机网络之HTTPS</h1>
                 </div>
             </div>
         </div>
@@ -508,28 +507,28 @@ HTTPS 详">
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                        2020-10-05
+                        2020-10-08
                     </div>
                 
 
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-check-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2020-10-06
+                        2020-10-09
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        160
+                        2.9k
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        10 分
                     </div>
                 
 
@@ -544,7 +543,100 @@ HTTPS 详">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/yungyu16/p/13329297.html">SSL/TLS协议详解(上)：密码套件，哈希，加密，密钥交换算法</a></p>
+                <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><blockquote>
+<p><strong>HTTPS = HTTP + SSL/TLS</strong></p>
+</blockquote>
+<p><code>HTTPS</code> （Secure Hypertext Transfer Protocol）<strong>安全超文本传输协议</strong>，是经过SSL/TLS加密的HTTP协议，端口号为443。其设计的主要目的是，提供对网站服务器的身份认证、保护交换数据的隐私与完整性。</p>
+<h1 id="TLS-SSL"><a href="#TLS-SSL" class="headerlink" title="TLS/SSL"></a>TLS/SSL</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+<p><code>TLS/SSL</code>是介于TCP和HTTP之间的一层安全协议</p>
+</blockquote>
+<blockquote>
+<p>用<strong>非对称加密</strong>的手段传递密钥，然后用密钥进行<strong>对称加密</strong>传递数据</p>
+</blockquote>
+<p><code>SSL（Secure Socket Layer）</code> 1994年由 浏览器开发商Netscape公司 率先倡导研发，为数据通讯提供安全支持，开发了最初的几个版本SSL 1.0、SSL 2.0、SSL 3.0。</p>
+<p><code>TLS（Transport LayerSecurity）</code>前身为SSL，1999年从 3.1 开始被 IETF（Internet Engineering Task Force，Internet 工程任务组）标准化并改名，发展至今已经有 TLS 1.0、TLS 1.1、TLS 1.2 三个版本。SSL3.0和TLS1.0由于存在安全漏洞，已经很少被使用到；TLS 1.3 改动会比较大，目前还在草案阶段，目前使用最广泛的是TLS 1.1、TLS 1.2；</p>
+<h2 id="对称加密和非对称加密"><a href="#对称加密和非对称加密" class="headerlink" title="对称加密和非对称加密"></a>对称加密和非对称加密</h2><h3 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h3><p>对称加密，顾名思义就是<strong>加密和解密都是使用同一个密钥</strong>，常见的对称加密算法有 DES、3DES 和 AES 等。</p>
+<ul>
+<li>优点：算法公开、计算量小、加密速度快、加密效率高，适合加密比较大的数据。</li>
+<li>缺点：<ol>
+<li>交易双方需要使用相同的密钥，也就无法避免密钥的传输，而密钥在传输过程中无法保证不被截获，因此对称加密的<strong>安全性得不到保证</strong>。</li>
+<li>每对用户每次使用对称加密算法时，都需要使用其他人不知道的唯一密钥，这会使得发收信双方所拥有的钥匙数量急剧增长，密钥管理成为双方的负担。对称加密算法在分布式网络系统上使用较为困难，主要是因为<strong>密钥管理困难，使用成本较高</strong>。</li>
+</ol>
+</li>
+</ul>
+<p><img src="https://segmentfault.com/img/bVbCz9u/view" alt=""></p>
+<h3 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h3><p>非对称加密，顾名思义就是<strong>加密和解密需要使用两个不同的密钥</strong>：<strong>公钥</strong>（public key）和<strong>私钥</strong>（private key）。公钥与私钥是一对，如果用公钥对数据进行加密，只有用对应的私钥才能解密；如果用私钥对数据进行加密，那么只有用对应的公钥才能解密。</p>
+<ul>
+<li>优点：算法公开，加密和解密使用不同的钥匙，私钥不需要通过网络进行传输，安全性很高。</li>
+<li>缺点：计算量比较大，加密和解密速度相比对称加密慢很多，<strong>加密的内容长度不能超过公钥的长度</strong>。</li>
+</ul>
+<p><img src="https://segmentfault.com/img/bVbClUi/view" alt=""></p>
+<h2 id="握手过程"><a href="#握手过程" class="headerlink" title="握手过程"></a>握手过程</h2><h3 id="RSA算法"><a href="#RSA算法" class="headerlink" title="RSA算法"></a>RSA算法</h3><ol>
+<li><strong>“client hello”</strong>：客户端通过发送”client hello”消息向服务器发起握手请求，该消息包含了客户端所支持的 <strong>TLS 版本</strong>和<strong>密码组合</strong>以供服务器进行选择，还有一个”<strong>client random</strong>“随机字符串。</li>
+<li><strong>“server hello”</strong>：服务器发送”server hello”消息对客户端进行回应，该消息包含了<strong>数字证书</strong>，<strong>服务器选择的密码组合</strong>和”<strong>server random</strong>“随机字符串。</li>
+<li><strong>证书验证</strong>：客户端对服务器发来的证书进行验证，确保对方的合法身份，验证过程可以细化为以下几个步骤：<ol>
+<li>检查数字签名</li>
+<li>验证证书链 (这个概念下面会进行说明)</li>
+<li>检查证书的有效期</li>
+<li>检查证书的撤回状态 (撤回代表证书已失效)</li>
+</ol>
+</li>
+<li><strong>计算“Pre-Master Secret”</strong>：客户端向服务器发送另一个随机字符串”<strong>premaster secret (预主密钥)</strong>“，这个字符串是经过服务器的公钥加密过的，只有对应的私钥才能解密。</li>
+<li><strong>使用私钥</strong>：服务器使用私钥解密”premaster secret”。</li>
+<li><strong>生成共享密钥</strong>：客户端和服务器均使用 client random，server random 和 premaster secret，并通过相同的算法生成相同的共享密钥 <strong>KEY</strong>。</li>
+<li><strong>客户端就绪：</strong>客户端发送经过共享密钥 <strong>KEY</strong>加密过的”finished”信号。</li>
+<li><strong>服务器就绪：</strong>服务器发送经过共享密钥 <strong>KEY</strong>加密过的”finished”信号。</li>
+<li><strong>达成安全通信：</strong>握手完成，双方使用对称加密进行安全通信。</li>
+</ol>
+<p><img src="https://segmentfault.com/img/bVbCCMD/view" alt=""></p>
+<h3 id="DH算法"><a href="#DH算法" class="headerlink" title="DH算法"></a>DH算法</h3><p><a href="https://www.liaoxuefeng.com/wiki/1022910821149312/1023025778520640">廖雪峰对DH算法的简单介绍</a></p>
+<ol>
+<li><strong>“client hello”</strong>：客户端通过发送”client hello”消息向服务器发起握手请求，该消息包含了客户端所支持的 <strong>TLS 版本</strong>和<strong>密码组合</strong>以供服务器进行选择，还有一个”<strong>client random</strong>“随机字符串。</li>
+<li><strong>“server hello”</strong>：服务器发送”server hello”消息对客户端进行回应，该消息包含了<strong>数字证书</strong>，<strong>服务器选择的密码组合</strong>和”<strong>server random</strong>“随机字符串。</li>
+<li><strong>证书验证</strong>：客户端对服务器发来的证书进行验证，确保对方的合法身份，验证过程可以细化为以下几个步骤：<ol>
+<li>检查数字签名</li>
+<li>验证证书链 (这个概念下面会进行说明)</li>
+<li>检查证书的有效期</li>
+<li>检查证书的撤回状态 (撤回代表证书已失效)</li>
+</ol>
+</li>
+<li><strong>服务器密钥交换消息</strong>：服务器生成一对公钥和私钥，将公钥发送给客户端，服务器密钥交换完成后，服务器将发送Server Hello Done 消息。</li>
+<li><strong>客户端密钥交换</strong>：客户端生成一对公钥和私钥，将公钥发送给服务器。</li>
+<li><strong>计算“Pre-Master Secret”</strong>：客户端和服务端使用DH算法生成一个相同的”<strong>premaster secret (预主密钥)</strong>“。</li>
+<li><strong>生成共享密钥</strong>：客户端和服务器均使用 client random，server random 和 premaster secret，并通过相同的算法生成相同的共享密钥 <strong>KEY</strong>。</li>
+<li><strong>客户端就绪：</strong>客户端发送经过共享密钥 <strong>KEY</strong>加密过的”finished”信号。</li>
+<li><strong>服务器就绪：</strong>服务器发送经过共享密钥 <strong>KEY</strong>加密过的”finished”信号。</li>
+<li><strong>达成安全通信：</strong>握手完成，双方使用对称加密进行安全通信。</li>
+</ol>
+<p>使用Diffie Hellman算法进行TLS密钥交换具有优势。客户端和服务器都为每个新会话生成一个新密钥对。一旦计算出预主密钥，将立即删除客户端和服务器使用DH算法创建的私钥。这意味着私钥永远不会被窃取，确保<a href="https://en.wikipedia.org/wiki/Perfect_forward_secrecy">完美的前向保密</a>。</p>
+<h2 id="消息验证代码（MAC）和TLS数据完整性"><a href="#消息验证代码（MAC）和TLS数据完整性" class="headerlink" title="消息验证代码（MAC）和TLS数据完整性"></a>消息验证代码（MAC）和TLS数据完整性</h2><p>TLS为客户端和服务器分配了单独的密钥，它们都来自主密钥本身，换句话说，主密钥不直接用于加密数据，而是将单独的加密密钥用于客户端和服务器。由于双方都有两个密钥，服务器用其密钥加密的数据可以由客户端轻松解密，反之亦然。</p>
+<p>TLS还具有用于对称密钥加密的附加安全机制。</p>
+<p>窃听者可以对传输中的加密数据进行两种可能的攻击：尝试解密数据或尝试修改数据。只要密钥安全，我们就可以认为解密基本上是不可能的，但如果是修改数据呢？客户端和服务器是怎么知道攻击者没有修改过数据呢？如上所述，TLS不仅仅是加密数据，还可以保护数据，使其免受未检测到的修改，换句话说，TLS可以检查数据的完整性。</p>
+<p>当服务器或客户端使用主密钥加密数据时，它还会计算明文数据的校验和（哈希值），这个校验和称为<strong>消息验证代码（MAC）</strong>。然后在发送之前将MAC包含在加密数据中。密钥用于从数据中生成MAC，以确保传输过程中攻击者无法从数据中生成相同的MAC，故而MAC被称为HMAC（哈希消息认证码）。另一方面，在接收到消息时，解密器将MAC与明文分开，然后用它的密钥计算明文的校验和，并将其与接收到的MAC进行比较，如果匹配，那我们就可以得出结论：数据在传输过程中没有被篡改。</p>
+<p>客户端和服务器必须使用相同的散列算法来创建以及验证MAC，例如密码套件<code>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_ SHA256</code>中的SHA256 是用于处理HMAC的哈希函数，为了提高安全性，客户端和服务器使用MAC密钥。让我们看看这些是什么。</p>
+<h2 id="数字证书"><a href="#数字证书" class="headerlink" title="数字证书"></a>数字证书</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p>在非对称加密通信过程中，服务器需要将公钥发送给客户端，在这一过程中，公钥很可能会被第三方拦截并替换，然后这个第三方就可以冒充服务器与客户端进行通信，这就是传说中的“<strong>中间人攻击</strong>”(man in the middle attack)。解决此问题的方法是通过受信任的第三方交换公钥，具体做法就是服务器不直接向客户端发送公钥，而是要求受信任的第三方，也就是证书认证机构 (Certificate Authority, 简称 CA)将公钥合并到数字证书中，然后服务器会把公钥连同证书一起发送给客户端，私钥则由服务器自己保存以确保安全。</p>
+<h3 id="证书校验"><a href="#证书校验" class="headerlink" title="证书校验"></a>证书校验</h3><p>要证明证书的真实性，通常依赖于<strong>一组</strong>受信任的第三方<strong>证书颁发机构</strong>（Certificate authorities, <strong>CA</strong>）。验证 TLS 证书有效性的方法如下：</p>
+<ol>
+<li><p>检查证书是否是浏览器中<strong>受信任的根证书机构</strong>颁发</p>
+<p>证书都是上级 CA 签发的，上级的 CA 可能还有上级，直到找到根证书。</p>
+</li>
+<li><p>检查证书中的<strong>证书吊销列表</strong>（CRL），看证书是否已经被吊销</p>
+<p>证书被吊销后，会被记录在证书吊销列表中，CA 会定期发布 CRL。应用程序可以根据 CRL 来检查证书是否被吊销。</p>
+</li>
+<li><p>通过<strong>在线证书状态协议</strong>（OCSP）检查证书是否有效</p>
+<p>CA 会提供实时的查询接口，用来查询证书的有效性。在线实时查询会使得 TLS 握手时间延长，因为浏览器需要等待查询结束才能继续 TLS 握手。至于使用<strong>在线查询</strong>还是证书中的<strong>吊销列表</strong>，由浏览器决定。</p>
+</li>
+<li><p>检查证书是否过期</p>
+</li>
+<li><p>检查域名和证书中的域名是否一致</p>
+</li>
+<li><p>查询网站是否被列入了欺诈网站黑名单</p>
+<p>这一步 IE7 会进行，IE7 会到<strong>欺诈网站数据库</strong>，查询网站是否被列入了欺诈黑名单。</p>
+</li>
+</ol>
+<p>经过了以上步骤，浏览器中才会显示安全锁的标志。任意一个步骤出问题，浏览器都无法建立安全链接，并最终提示“您的链接不是私密链接”。</p>
+<h1 id="整个HTTPS的传输过程"><a href="#整个HTTPS的传输过程" class="headerlink" title="整个HTTPS的传输过程"></a>整个HTTPS的传输过程</h1><p><img src="https://segmentfault.com/img/bVbClUl/view" alt=""></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/yungyu16/p/13329297.html">SSL/TLS协议详解(上)：密码套件，哈希，加密，密钥交换算法</a></p>
 <p><a href="https://www.cnblogs.com/yungyu16/p/13329305.html">SSL/TLS协议详解(中)——证书颁发机构</a></p>
 <p><a href="https://www.cnblogs.com/yungyu16/p/13329311.html">SSL/TLS协议详解(下)——TLS握手协议</a></p>
 <p><a href="https://segmentfault.com/a/1190000021494676">HTTPS 详解一：附带最精美详尽的 HTTPS 原理图</a></p>
@@ -673,24 +765,23 @@ HTTPS 详">
                         <div class="card-image">
                             
                                 
-                                <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="计算机h网络之HTTPS">
+                                <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="计算机网络之HTTPS">
                             
-                            <span class="card-title">计算机h网络之HTTPS</span>
+                            <span class="card-title">计算机网络之HTTPS</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                概念参考SSL/TLS协议详解(上)：密码套件，哈希，加密，密钥交换算法
-SSL/TLS协议详解(中)——证书颁发机构
-SSL/TLS协议详解(下)——TLS握手协议
-HTTPS 详解一：附带最精美详尽的 HTTPS 原理图
-HTTPS 详
+                                概念
+HTTPS = HTTP + SSL/TLS
+
+HTTPS （Secure Hypertext Transfer Protocol）安全超文本传输协议，是经过SSL/TLS加密的HTTP协议，端口号为443。其设计的主要目的是，提供对
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-10-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-10-08
                             </span>
                             <span class="publish-author">
                                 
@@ -933,7 +1024,7 @@ HTTP协议是基于TCP/IP协议之上的应用层协议
             
                 
                     &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                            class="white-color">36.6k</span>&nbsp;字
+                            class="white-color">39.3k</span>&nbsp;字
                 
                 
                 <script>
@@ -1094,7 +1185,7 @@ HTTP协议是基于TCP/IP协议之上的应用层协议
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1601993592437')
+  navigator.serviceWorker.register('/sw.js?t=1602255851134')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
