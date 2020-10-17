@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ltara.gitee.io/posts/49199.html</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ltara.gitee.io/posts/40417.html</loc>
     
     <lastmod>2020-10-09</lastmod>
@@ -137,7 +144,7 @@
 
   <url>
     <loc>http://ltara.gitee.io/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -145,84 +152,98 @@
   
   <url>
     <loc>http://ltara.gitee.io/tags/JavaScript/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/CSS/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/flex/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/grid/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/MongoDB/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/Vue/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/Node/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/HTTP/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/HTTPS/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/tags/SSL-TLS/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ltara.gitee.io/tags/%E7%BC%93%E5%AD%98/</loc>
+    <lastmod>2020-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ltara.gitee.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -231,35 +252,42 @@
   
   <url>
     <loc>http://ltara.gitee.io/categories/JavaScript/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/categories/CSS/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/categories/Vue/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ltara.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2020-10-09</lastmod>
+    <lastmod>2020-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ltara.gitee.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
+    <lastmod>2020-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
